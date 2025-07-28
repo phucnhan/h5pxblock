@@ -52,7 +52,7 @@ function H5PPlayerXBlock(runtime, element, args) {
       const options = {
         h5pJsonPath: args.h5pJsonPath,
         frameJs:
-          "https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/frame.bundle.js",
+          "https://h5pjs-css-cdn.vercel.app/dist/frame.bundle.js",
         frameCss:
           "https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/styles/h5p.css",
         frame: args.frame,
@@ -134,7 +134,7 @@ function loadJS() {
     } else {
       // Load H5PStandalone dynamically using $.getScript
       $.getScript(
-        "https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/main.bundle.js"
+        "https://h5pjs-css-cdn.vercel.app/dist/main.bundle.js"
       )
         .done(function () {
           window.H5PStandalone = H5PStandalone;
