@@ -39,23 +39,16 @@ function H5PPlayerXBlock(runtime, element, args) {
     }
   }
   
-async function initWithH5P(H5PStandalone, service, runtime, element, args) {
+  async function initWithH5P(H5PStandalone, service, runtime, element, args) {
     const contentUserDataUrl = runtime.handlerUrl(
       element,
       "user_interaction_data"
     );
     const contentxResultSaveUrl = runtime.handlerUrl(element, "result_handler");
 
-    console.log("contentUserDataUrl:", contentUserDataUrl);
-    console.log("contentxResultSaveUrl:", contentxResultSaveUrl);
-
     const h5pel = document.getElementById("h5p-" + args.player_id);
-    console.log("h5pel:", h5pel);
-
     if (h5pel && $(h5pel).children(".h5p-iframe-wrapper").length == 0) {
       const userObj = { name: args.user_full_name, mail: args.user_email };
-      console.log("userObj:", userObj);
-
       const options = {
         h5pJsonPath: args.h5pJsonPath,
         frameJs:
@@ -78,9 +71,6 @@ async function initWithH5P(H5PStandalone, service, runtime, element, args) {
           contentUserDataUrl: contentUserDataUrl,
         },
       };
-
-      console.log("options:", options);
-
 
       try {
         await new H5PStandalone.H5P(h5pel, options);
