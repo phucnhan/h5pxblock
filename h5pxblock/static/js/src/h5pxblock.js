@@ -54,7 +54,7 @@ function H5PPlayerXBlock(runtime, element, args) {
         frameJs:
           "https://h5pjs-css-cdn.vercel.app/dist/frame.bundle.js",
         frameCss:
-          "https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/styles/h5p.css",
+          "https://h5pjs-css-cdn.vercel.app/dist/styles/h5p.css",
         frame: args.frame,
         copyright: args.copyright,
         icon: args.icon,
