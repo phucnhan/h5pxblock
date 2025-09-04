@@ -1,4 +1,8 @@
 /* studio_view css rules */
+html.h5p-iframe, html.h5p-iframe > body {
+    font-family: 'sans-serif' !important;
+}
+
 .progress-bar-container{
     display: none;
 }

@@ -1,4 +1,9 @@
 
+html.h5p-iframe, html.h5p-iframe > body {
+    font-family: 'sans-serif' !important;
+}
+
+
 @keyframes spinner-border {
     to { transform: rotate(360deg); }
   }  
